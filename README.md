@@ -7,7 +7,14 @@
 </br>
 
 ## 🏆 Đây là code base, có thể dùng để xây dựng phát triển thêm các chương trình mới
- **👉 Mỗi lần truy cập, xem video sẽ lưu vào cache để lướt lại không cần tải từ server. Mỗi lần thoát ra và truy cập thì tiến trình lặp lại**
+            - Mỗi lần truy cập sẽ tải dữ liệu video từ ( server lưu trữ video ) để xem, và sẽ được lưu vào cache Service Worker 
+            để tải nhanh khi lướt xem lại những video cũ mà không cần tải từ server
+            
+            - Service Worker chỉ cache các dữ liệu tĩnh ( html, css,... ) và không cache dữ liệu động ( video,... ) -> Nhiều video
+            cũng không gây tốn cache vì chỉ cache dữ liệu tĩnh có dung lượng nhỏ
+
+            - VD: Khi lưu trữ video bằng cdn web khác thì băng thông tính cho web đó. Do đó, sau khi thoát ra, và khi truy cập lại
+            sẽ lại tải từ server để xem theo trình tự như vậy, video được tải từ cdn của web lưu video
 
 </br>
 
@@ -22,3 +29,13 @@
             - VIDEOS_JSON_URL: Đường dẫn đến file JSON chứa thông tin video như Title, URL, desription.
             ( ví dụ xây dựng trên github có repository là tiktok-clone => thì VIDEOS_JSON_URL = "/tiktok-clone/videos.json" )
             
+</br> 
+
+## ❌ Cách xóa Local Storage, Cache Service Worker, Cache HTTP:
+
+            - Settings -> Privacy and security -> Delete browsing data -> Cached images and files : Xóa Cache HTTP
+            ( Cài đặt -> Quyền riêng tư và bảo mật -> Xóa dữ liệu duyệt web -> Tệp và hình ảnh được lưu trong bộ nhớ đệm )
+
+            - F12 -> Application -> Local storage : xóa Local Storage
+
+            - F12 -> Application -> Cache storage : xóa Cache Service Worker
