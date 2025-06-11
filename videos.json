@@ -1,5 +1,5 @@
 {
-    "version": "1.0",
+    "version": "1.0.1",
     "videos": [
         {
             "url": "Rpddifmx.mp4",
@@ -44,6 +44,11 @@
         {
             "url": "wngKRw.webm",
             "description": "Video mẫu 11"
+        },
+        {
+            "url": "NoT7Kr0.webm",
+            "description": "Video mẫu 12"
         }
+        
     ]
 }
