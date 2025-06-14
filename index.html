@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>TikTok Clone by Tống Trần Kiên</title>
-        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="https://tongtrankien1605.github.io/tiktok-clone/favicon.ico" />
         <style>
             body {
                 margin: 0;
@@ -102,7 +102,7 @@
             .refresh-btn {
                 position: fixed;
                 top: 10px;
-                right: 10px;
+                right: 35px;
                 background: rgba(0, 0, 0, 0.7);
                 color: white;
                 border: none;
@@ -145,18 +145,13 @@
             <div class="loading">Đang tải...</div>
         </div>
 
-        <button class="refresh-btn" onclick="clearCacheAndReload()">Lag thì làm mới video</button>
+        <button class="refresh-btn" onclick="clearCacheAndReload()">🔄 Reload Video 🔄</button>
 
         <script>
-
             // Đặt các biến toàn cục
-
-            const BASE_URL_VIDEO            = "https://cdn.anh.moe/s9/";
-
-            const REPOSITORY_PROJECT_ROOT   = "/tiktok-clone/";
-
-            const VIDEOS_JSON_URL           = "/tiktok-clone/videos.json";
-
+            const REPOSITORY_PROJECT_ROOT = "/tiktok-clone/";
+            const VIDEOS_JSON_URL = "/tiktok-clone/videos.json";
+            const CACHE_NAME = "tiktok-clone-v1"; // Thêm CACHE_NAME
 
             // Biến để lưu trữ danh sách video và trạng thái
             let videoUrls = [];
@@ -165,14 +160,12 @@
             let isFirstLoad = true;
             let observer = null;
 
-
             // Các hằng số cho cache
             const CACHE_KEY = "videoUrls";
             const CACHE_EXPIRY_KEY = "videoUrlsExpiry";
             const CACHE_DURATION = 30 * 60 * 1000;
-            const FIRST_VISIT_KEY = "firstVisit"; // Key để kiểm tra lần truy cập đầu tiên
+            const FIRST_VISIT_KEY = "firstVisit";
 
-            
             // Kiểm tra và reload lần đầu truy cập
             window.addEventListener("load", () => {
                 const isFirstVisit = localStorage.getItem(FIRST_VISIT_KEY);
@@ -190,7 +183,7 @@
 
             function isCacheValid() {
                 const expiry = localStorage.getItem(CACHE_EXPIRY_KEY);
-                return expiry && Date.now < parseInt(expiry);
+                return expiry && Date.now() < parseInt(expiry);
             }
 
             async function loadVideos(isReload = false) {
@@ -208,10 +201,7 @@
                             if (response.ok) {
                                 const newData = await response.json();
                                 if (newData.version === cachedData.version) {
-                                    videoUrls = cachedData.videos.map((v) => ({
-                                        ...v,
-                                        url: v.url.startsWith("http") ? v.url : `${BASE_URL_VIDEO}${v.url}`,
-                                    }));
+                                    videoUrls = cachedData.videos;
                                     shouldUseCache = true;
                                 }
                             }
@@ -232,7 +222,7 @@
                             .filter((v) => v.url && isValidVideoUrl(v.url))
                             .map((v) => ({
                                 ...v,
-                                url: v.url.startsWith("http") ? v.url : `${BASE_URL_VIDEO}${v.url}`,
+                                url: v.url // Sử dụng URL tuyệt đối trực tiếp
                             }));
                         localStorage.setItem(CACHE_KEY, JSON.stringify({ version: data.version, videos: videoUrls }));
                         localStorage.setItem(CACHE_EXPIRY_KEY, Date.now() + CACHE_DURATION);
@@ -295,12 +285,12 @@
                     const registration = await navigator.serviceWorker.getRegistration(`${REPOSITORY_PROJECT_ROOT}sw.js`);
                     if (registration) {
                         await registration.unregister();
-                        await caches.delete("tiktok-clone-v1");
+                        await caches.delete(CACHE_NAME); // Sử dụng CACHE_NAME
                     }
                 }
                 localStorage.removeItem(CACHE_KEY);
                 localStorage.removeItem(CACHE_EXPIRY_KEY);
-                localStorage.removeItem(FIRST_VISIT_KEY); // Xóa trạng thái lần truy cập đầu tiên
+                localStorage.removeItem(FIRST_VISIT_KEY);
                 window.location.reload();
             }
 

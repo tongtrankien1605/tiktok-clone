@@ -1,68 +1,27 @@
 {
-    "version": "1.0.2",
-    "DayUpdate": "2023-10-01 14:23",
     "author": "tongtrankien1605",
+
+    "version": "1.0.1",
+
+    "DayUpdate": "2025-06-14",
+
     "videos": [
-        {
-            "url": "Rpddifmx.mp4",
-            "description": "Video mẫu 1"
-        },
-        {
-            "url": "RFQHrXnG.mp4",
-            "description": "Video mẫu 2"
-        },
-        {
-            "url": "h1qTQLw5.mp4",
-            "description": "Video mẫu 3"
-        },
-        {
-            "url": "n6tGAl.mp4",
-            "description": "Video mẫu 4"
-        },
-        {
-            "url": "ApD4fz.mp4",
-            "description": "Video mẫu 5"
-        },
-        {
-            "url": "wp1hg4TC.mp4",
-            "description": "Video mẫu 6"
-        },
-        {
-            "url": "nuGHBl.mp4",
-            "description": "Video mẫu 7"
-        },
-        {
-            "url": "DtggdZI.mp4",
-            "description": "Video mẫu 8"
-        },
-        {
-            "url": "c65zzdOh.mp4",
-            "description": "Video mẫu 9"
-        },
-        {
-            "url": "1VsTi103.mp4",
-            "description": "Video mẫu 10"
-        },
-        {
-            "url": "g863pxk.mp4",
-            "description": "Video mẫu 11"
-        },
-        {
-            "url": "2Wa1t96.mp4",
-            "description": "Video mẫu 12"
-        },
-        {
-            "url": "2cqpKd9R.mp4",
-            "description": "Video mẫu 13"
-        },
-        {
-            "url": "jMTVU8J.mp4",
-            "description": "Video mẫu 14"
-        },
-        {
-            "url": "lSNqqZa0.mp4",
-            "description": "Video mẫu 15"
-        }
+
+        { "url": "https://cdn.anh.moe/s9/Rpddifmx.mp4" , "title": "Đào Huyền My 01" ,  "description": "Video mẫu 01" , "dayCreate" : "2025-06-14" },
+        { "url": "https://cdn.anh.moe/s9/RFQHrXnG.mp4" , "title": "Đào Huyền My 02" ,  "description": "Video mẫu 02" , "dayCreate" : "2025-06-14" },
+        { "url": "https://cdn.anh.moe/s9/h1qTQLw5.mp4" , "title": "Đào Huyền My 03" ,  "description": "Video mẫu 03" , "dayCreate" : "2025-06-14" },
+        { "url": "https://cdn.anh.moe/s9/n6tGAl.mp4" , "title": "Đào Huyền My 04" ,  "description": "Video mẫu 04" , "dayCreate" : "2025-06-14" },
+        { "url": "https://cdn.anh.moe/s9/ApD4fz.mp4" , "title": "Đào Huyền My 05" ,  "description": "Video mẫu 05" , "dayCreate" : "2025-06-14" },
+        { "url": "https://cdn.anh.moe/s9/wp1hg4TC.mp4" , "title": "Đào Huyền My 06" ,  "description": "Video mẫu 06" , "dayCreate" : "2025-06-14" },
+        { "url": "https://cdn.anh.moe/s9/nuGHBl.mp4" , "title": "Đào Huyền My 07" ,  "description": "Video mẫu 07" , "dayCreate" : "2025-06-14" },
+        { "url": "https://cdn.anh.moe/s9/DtggdZI.mp4" , "title": "Đào Huyền My 08" ,  "description": "Video mẫu 08" , "dayCreate" : "2025-06-14" },
+        { "url": "https://cdn.anh.moe/s9/c65zzdOh.mp4" , "title": "Đào Huyền My 09" ,  "description": "Video mẫu 09" , "dayCreate" : "2025-06-14" },
+        { "url": "https://cdn.anh.moe/s9/1VsTi103.mp4" , "title": "Đào Huyền My 10" ,  "description": "Video mẫu 10" , "dayCreate" : "2025-06-14" },
+        { "url": "https://cdn.anh.moe/s9/g863pxk.mp4" , "title": "Đào Huyền My 11" ,  "description": "Video mẫu 11" , "dayCreate" : "2025-06-14" },
+        { "url": "https://cdn.anh.moe/s9/2Wa1t96.mp4" , "title": "Đào Huyền My 12" ,  "description": "Video mẫu 12" , "dayCreate" : "2025-06-14" },
+        { "url": "https://cdn.anh.moe/s9/2cqpKd9R.mp4" , "title": "Đào Huyền My 13" ,  "description": "Video mẫu 13" , "dayCreate" : "2025-06-14" },
+        { "url": "https://cdn.anh.moe/s9/jMTVU8J.mp4" , "title": "Đào Huyền My 14" ,  "description": "Video mẫu 14" , "dayCreate" : "2025-06-14" },
+        { "url": "https://cdn.anh.moe/s9/lSNqqZa0.mp4" , "title": "Đào Huyền My 15" ,  "description": "Video mẫu 15" , "dayCreate" : "2025-06-14" }
+        
     ]
 }
-

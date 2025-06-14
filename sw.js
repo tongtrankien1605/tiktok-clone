@@ -1,5 +1,4 @@
 const CACHE_NAME = "tiktok-clone-v1";
-
 const REPOSITORY_PROJECT_ROOT = "/tiktok-clone/";
 
 self.addEventListener("install", (event) => {
